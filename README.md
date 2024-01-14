@@ -12,9 +12,3 @@ Projekt oparty jest na dwóch zbiorach danych dostępnych na platformie Kaggle:
 - [ASL Alphabet](https://www.kaggle.com/datasets/grassknoted/asl-alphabet)
 
 - [American Sign Language Digit Dataset](https://www.kaggle.com/datasets/rayeed045/american-sign-language-digit-dataset)
-
-
-Przetworzone keypointy znajdują się pod adresami:
-- [Litery](https://drive.google.com/drive/folders/1-_opfJrRnu7ECYvS9vErTb7Iuz1cQQl8?usp=sharing)
-
-- [Cyfry](https://drive.google.com/drive/folders/1ZgQ_3TZMPPfuu6Sb6bMO8VO_J-lRAJcx?usp=sharing)
