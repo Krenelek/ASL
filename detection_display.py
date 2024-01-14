@@ -7,8 +7,8 @@ import time
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
-# Camera setup
-cap = cv2.VideoCapture(1)
+# Camera setup (select device)
+cap = cv2.VideoCapture(0)
 
 # For storing recognized characters
 recognized_characters = []
@@ -69,8 +69,8 @@ with mp_hands.Hands(
                     # Store recognized character
                     recognized_characters.append(prediction)
 
-                    # Limit the history to the last 40 recognized characters
-                    recognized_characters = recognized_characters[-40:]
+                    # Limit the history to the last 20 recognized characters
+                    recognized_characters = recognized_characters[-20:]
 
                     prev_time = current_time
 
@@ -90,9 +90,9 @@ with mp_hands.Hands(
                 # Displaying the hand recognition and history window
                 cv2.imshow('Hand Recognition and History', cv2.resize(history_image, (600, 800)))
 
-        # Close window by clicking on GUI close button [x]
+        # Close window by clicking on GUI close button [x] or typing q letter
         key = cv2.waitKey(1)
-        if cv2.waitKey(10) & 0xFF == ord('q'):
+        if cv2.waitKey(10) & 0xFF == ord('q') or not cv2.getWindowProperty('Camera Feed', cv2.WND_PROP_VISIBLE) or not cv2.getWindowProperty('Hand Recognition and History', cv2.WND_PROP_VISIBLE):
             break
 
 
